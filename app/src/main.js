@@ -3,8 +3,9 @@ import { setupCounter } from "./counter.js";
 song=[
     {
         title:"",
+        artist:""
         length:,
-        cover:
+        cover:,
     },
     {
         
