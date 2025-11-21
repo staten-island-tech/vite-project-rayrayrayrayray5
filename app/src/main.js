@@ -14,7 +14,7 @@ song = [
   },
 ];
 function inject(item) {
-  const container = document.querySelector("#");
+  const container = document.querySelector("#app");
   container.insertAdjacementHTML(
     "afterbegin",
     `<div><img src="${item.cover}"> 
