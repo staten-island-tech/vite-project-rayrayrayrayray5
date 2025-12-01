@@ -34,5 +34,9 @@ button {
 }
 .png {
   width: 500px;
-  length: 500px;
+  height: 500px;
+}
+
+.class {
+  background-color: var(--primary);
 }
