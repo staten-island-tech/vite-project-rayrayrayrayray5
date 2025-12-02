@@ -93,8 +93,8 @@ function inject(item) {
     `<div class="card" genre-id="${item.genre}">
         <img class="png" src="${item.cover}"> 
         <h2>${item.title}</h2>
-        <h2>${item.artist}</h2>
-        <h2 >${item.length}</h2>
+        <h2 class="artist">${item.artist}</h2>
+        <h3 class="length">${item.length}</h3>
       </div>`
   );
 }

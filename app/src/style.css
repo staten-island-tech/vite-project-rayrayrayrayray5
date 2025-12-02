@@ -1,42 +1,59 @@
 :root {
-  --grey: #b3c4db;
-  --light-white: #e3eff9;
+  --darkmodeprimary: #1d2b3a;
+  --darkmodesecondary: #2e2e2e;
+  --darkmodetext: #ffffff;
   --light-red: #f87171;
   --dark-red: #dc2626;
-
-  /* Intentions */
-  --primary: var(--light-white);
-  --secondary: var(--grey);
+  --lightmodetext: #000000;
 }
 
 .cool {
-  --primary: var(--grey);
-  --secondary: var(--light-white);
+  --primary: var(--darkmodeprimary);
+  --secondary: var(--darkmodesecondary);
+  --text: var(--darkmodetext);
 }
 
 .warm {
   --primary: var(--light-red);
   --secondary: var(--dark-red);
+  --text: var(--lightmodetext);
 }
 
 .hero {
-  background-color: var(--primary);
-}
-
-body {
   background-color: var(--secondary);
 }
 
+body {
+  background-color: var(--primary);
+}
+
 button {
-  background-color: var(--primary-color);
-  color: rgb(0, 0, 0);
+  background-color: var(--secondary);
+  color: var(--text);
   margin-bottom: 25px;
 }
 .png {
   width: 500px;
   height: 500px;
+  padding-top: 20px;
+}
+h2 {
+  margin: 12px;
+  color: var(--text);
+}
+h3 {
+  color: var(--text);
+}
+.card {
+  background-color: var(--secondary);
+  text-align: center;
 }
 
-.class {
-  background-color: var(--primary);
+.length {
+  padding-bottom: 20px;
+}
+
+body {
+  color: var(--text);
+  text-align: center;
 }
