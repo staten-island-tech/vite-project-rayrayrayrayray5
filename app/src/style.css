@@ -2,8 +2,8 @@
   --darkmodeprimary: #1d2b3a;
   --darkmodesecondary: #2e2e2e;
   --darkmodetext: #ffffff;
-  --light-red: #f87171;
-  --dark-red: #dc2626;
+  --lightmodeprimary: #ffffff;
+  --lightmodesecondary: #e4e4e4;
   --lightmodetext: #000000;
 }
 
@@ -14,8 +14,8 @@
 }
 
 .warm {
-  --primary: var(--light-red);
-  --secondary: var(--dark-red);
+  --primary: var(--lightmodeprimary);
+  --secondary: var(--lightmodesecondary);
   --text: var(--lightmodetext);
 }
 
@@ -31,6 +31,26 @@ button {
   background-color: var(--secondary);
   color: var(--text);
   margin-bottom: 25px;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 14px 18px;
+  color: var(--text);
+  box-shadow: inset 0 0 0 2px var(--text);
+  background-color: transparent;
+  height: 48px;
 }
 .png {
   width: 500px;
@@ -56,4 +76,17 @@ h3 {
 body {
   color: var(--text);
   text-align: center;
+}
+.input {
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid var(--text);
+  appearance: none;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }

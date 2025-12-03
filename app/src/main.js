@@ -112,6 +112,11 @@ document.querySelector(".btn").addEventListener("click", function () {
   }
 });
 
+function playSound() {
+  var audio = new Audio("sound.mp3");
+  audio.play();
+}
+
 /*Create array
 inject array
 

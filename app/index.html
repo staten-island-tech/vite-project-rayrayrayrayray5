@@ -10,8 +10,17 @@
     <h1 class="hero">The Greatest Music Playlist Builder</h1>
     <div class="main">
       <button class="btn">Change Theme</button>
-      <input class="input" type="text" placeholder="Song Name" />
-      <h1>Playlist:</h1>
+      <input class="input" type="text" placeholder="Enter Song Name" />
+      <button onclick="addSong()">Add Song</button>
+      <div class="output"></div>
+      <button class="filter">All</button>
+      <button class="filter" genre-id="Pop">Pop</button>
+      <button class="filter" genre-id="Hip-Hop">Hip-Hop</button>
+      <button class="filter" genre-id="R&B">R&B</button>
+      <button class="filter" genre-id="Rock">Rock</button>
+      <button class="filter" genre-id="Folk">Folk</button>
+      <button class="filter" genre-id="EDM">EDM</button>
+      <h1>Your Playlist:</h1>
       <section class="app"></section>
     </div>
     <script type="module" src="/src/main.js"></script>
