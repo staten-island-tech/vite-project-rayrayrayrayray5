@@ -90,7 +90,7 @@ function inject(item) {
   const container = document.querySelector(".app");
   container.insertAdjacentHTML(
     "afterbegin",
-    `<div class="card" genre-id="${item.genre}">
+    `<div class="card" genre-id="${item.genre}" song-id="${item.title}">
         <img class="png" src="${item.cover}"> 
         <h2>${item.title}</h2>
         <h2 class="artist">${item.artist}</h2>
@@ -112,10 +112,24 @@ document.querySelector(".btn").addEventListener("click", function () {
   }
 });
 
-function playSound() {
-  var audio = new Audio("sound.mp3");
-  audio.play();
+function filterSongs() {
+  const buttons = document.querySelectorAll(".filter");
+  buttons.forEach((btn) =>
+    btn.addEventListener("click", function (event) {
+      const filteredSong = event.target
+        .closest(".card")
+        .getAttribute("genre-id");
+      inject(filteredSong);
+    })
+  );
+  const container = document.querySelector(".container");
+  container.innerHTML = "";
+
+  let songsFiltered;
+  songsFiltered = product.filter((songs) => songs.genre === category);
+  songsFiltered.forEach((songs) => inject(songs));
 }
+filterSongs(song);
 
 /*Create array
 inject array
