@@ -84,6 +84,13 @@ let song = [
     cover: "/blonde.jpg",
     genre: "R&B",
   },
+  {
+    title: "Baby - Justin Bieber (Cover)",
+    artist: "Geese",
+    length: "3:51",
+    cover: "/babygeese.jpg",
+    genre: "Rock",
+  },
 ];
 
 function inject(item) {
@@ -111,25 +118,6 @@ document.querySelector(".btn").addEventListener("click", function () {
     document.body.classList.remove("warm");
   }
 });
-
-function filterSongs() {
-  const buttons = document.querySelectorAll(".filter");
-  buttons.forEach((btn) =>
-    btn.addEventListener("click", function (event) {
-      const filteredSong = event.target
-        .closest(".card")
-        .getAttribute("genre-id");
-      inject(filteredSong);
-    })
-  );
-  const container = document.querySelector(".container");
-  container.innerHTML = "";
-
-  let songsFiltered;
-  songsFiltered = product.filter((songs) => songs.genre === category);
-  songsFiltered.forEach((songs) => inject(songs));
-}
-filterSongs(song);
 
 /*Create array
 inject array
