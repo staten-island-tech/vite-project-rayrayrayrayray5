@@ -119,6 +119,28 @@ document.querySelector(".btn").addEventListener("click", function () {
   }
 });
 
+function addSong() {
+  let image = document.getElementById("image").value;
+  let input = document.getElementById("input").value;
+  let ainput = document.getElementById("ainput").value;
+  let length = document.getElementById("length").value;
+  const container = document.querySelector(".app");
+  container.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="card" song-id="${input}">
+        <img class="png" src="${image}"> 
+        <h2>${input}</h2>
+        <h2 class="artist">${ainput}</h2>
+        <h3 class="length">${length}</h3>
+      </div>`
+  );
+}
+const addButton = document.querySelector(".addSongButton");
+addButton.addEventListener("click", function () {
+  addSong();
+});
+function filterButton() {}
+filterButton();
 /*Create array
 inject array
 
