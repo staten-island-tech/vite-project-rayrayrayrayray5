@@ -143,8 +143,23 @@ const addButton = document.querySelector(".addSongButton");
 addButton.addEventListener("click", function () {
   addSong();
 });
-function filterButton() {}
-filterButton();
+
+function filterButton() {
+  const container = document.querySelector(".app");
+  container.innerHTML = "";
+  let filteredSongs = song;
+  if (type !== "all")
+    filteredSongs = song.filter((item) => item.genre === type);
+  filteredSongs.forEach((item) => inject(item));
+}
+const filterBtn = document.querySelectorAll(".filter");
+filterBtn.forEach((thing) => {
+  thing.addEventListener("click", () => {
+    const yes = filterBtn.getAttribute("genre-id");
+    filterButton(yes);
+  });
+});
+
 /*Create array
 inject array
 
