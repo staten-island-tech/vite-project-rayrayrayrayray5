@@ -19,28 +19,28 @@ let song = [
     artist: "Tiffany Day",
     length: "3:44",
     cover: "/breakup.png",
-    genre: ["EDM", "Pop"],
+    genre: "EDM",
   },
   {
     title: "Baby I'm Bleeding",
     artist: "JPEGMAFIA",
     length: "2:32",
     cover: "/babyimbleeding.png",
-    genre: ["Hip-Hop", "EDM"],
+    genre: "Hip-Hop",
   },
   {
     title: "We Don't Leave the House",
     artist: "glaive",
     length: "2:25",
     cover: "/yall.png",
-    genre: ["Hip-Hop", "EDM"],
+    genre: "EDM",
   },
   {
     title: "MONDAY",
     artist: "Quadeca",
     length: "4:03",
     cover: "/monday.webp",
-    genre: ["Folk", "Pop"],
+    genre: "Folk",
   },
   {
     title: "It's You",
@@ -54,21 +54,21 @@ let song = [
     artist: "Joji",
     length: "1:50",
     cover: "/pixelatedkisses.webp",
-    genre: ["R&B", "Hip-Hop"],
+    genre: "R&B",
   },
   {
     title: "BLEACH",
     artist: "BROCKHAMPTON",
     length: "4:33",
     cover: "/sat3.png",
-    genre: ["Hip-Hop", "Pop"],
+    genre: "Hip-Hop",
   },
   {
     title: "Stateside",
     artist: "PinkPantheress",
     length: "2:48",
     cover: "/stateside.webp",
-    genre: ["EDM", "Pop"],
+    genre: "EDM",
   },
   {
     title: "Bodys",
@@ -90,6 +90,56 @@ let song = [
     length: "3:51",
     cover: "/babygeese.jpg",
     genre: "Rock",
+  },
+  {
+    title: "Every Knife In The House Was Mine",
+    artist: "Sugar Cherry",
+    length: "3:01",
+    cover: "/landofpine.jpg",
+    genre: "Folk",
+  },
+  {
+    title: "Magic I Want U",
+    artist: "Jane Remover",
+    length: "4:58",
+    cover: "/magiciwantu.jpg",
+    genre: "Pop",
+  },
+  {
+    title: "Yamaha",
+    artist: "Dijon",
+    length: "4:28",
+    cover: "/baby.jpg",
+    genre: "R&B",
+  },
+  {
+    title: "White Keys",
+    artist: "Dominic Fike",
+    length: "2:24",
+    cover: "/whitekeys.jpg",
+    genre: "Pop",
+  },
+  {
+    title: "Doggy",
+    artist: "Geezer, Love Spells, Truly Young",
+    length: "2:52",
+    cover: "/doggy.jpg",
+    genre: "Pop",
+  },
+  {
+    title: "American Boyfriend",
+    artist: "Kevin Abstract",
+    length: "3:58",
+    cover: "/abf.jpg",
+    genre: "Rock",
+  },
+  {
+    title: "Ain't No Way",
+    artist:
+      "Denzel Curry, 6LACK, Rico Nasty, JID, Powers Pleasant, Jasiah, Kitty Ca$h",
+    length: "4:24",
+    cover: "/mmesyfs.jpg",
+    genre: "Hip-Hop",
   },
 ];
 
@@ -144,22 +194,24 @@ addButton.addEventListener("click", function () {
   addSong();
 });
 
-function filterButton() {
+function filterButton(type) {
   const container = document.querySelector(".app");
   container.innerHTML = "";
   let filteredSongs = song;
-  if (type !== "all")
+  if (type !== "all") {
     filteredSongs = song.filter((item) => item.genre === type);
+  }
+
   filteredSongs.forEach((item) => inject(item));
 }
 const filterBtn = document.querySelectorAll(".filter");
 filterBtn.forEach((thing) => {
   thing.addEventListener("click", () => {
-    const yes = filterBtn.getAttribute("genre-id");
+    const yes = thing.getAttribute("genre-id");
     filterButton(yes);
   });
 });
-
+filterButton("all");
 /*Create array
 inject array
 
